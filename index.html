@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Stage Finder | Executive Growth Hub</title>
+  <meta name="description" content="Find your business stage and next step with this quick Executive Growth Hub multiple-choice quiz.">
+  <style>
+    :root{--navy:#0b1a2e;--navy2:#122844;--blue:#2563eb;--blue2:#1d4ed8;--bg:#f8fafc;--card:#fff;--line:#e2e8f0;--muted:#64748b;--text:#0f172a;--soft:#eff6ff;--green:#059669;--warn:#d97706;--shadow:0 18px 45px rgba(11,26,46,.12);--r:22px}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(180deg,#fff 0%,var(--bg) 55%,#fff 100%);color:var(--text);line-height:1.55}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:auto}.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .topin{height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--navy)}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;display:grid;place-items:center}.pill{border:1px solid #bfdbfe;background:var(--soft);color:var(--blue2);border-radius:999px;padding:7px 13px;font-size:.78rem;font-weight:900;white-space:nowrap}
+    .hero{padding:54px 0 30px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}.eyebrow{display:inline-flex;background:var(--soft);color:var(--blue2);border:1px solid #bfdbfe;border-radius:999px;padding:7px 13px;font-size:.82rem;font-weight:900;margin-bottom:16px}h1{font-size:clamp(2.1rem,5vw,3.8rem);line-height:1.04;letter-spacing:-.04em;margin:0;color:var(--navy)}.lead{font-size:1.08rem;color:var(--muted);margin:18px 0 0;max-width:680px}
+    .hero-card{background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);overflow:hidden}.hero-card .dark{background:linear-gradient(145deg,#081424,var(--navy2));color:#fff;padding:26px}.hero-card h2{margin:0 0 8px;font-size:1.35rem}.hero-card p{margin:0;color:#dbeafe}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:16px}.stat{background:var(--bg);border:1px solid var(--line);border-radius:16px;text-align:center;padding:14px}.stat strong{display:block;font-size:1.4rem;color:var(--navy)}.stat span{font-size:.74rem;color:var(--muted);font-weight:900;text-transform:uppercase}
+    main{padding:20px 0 70px}.shell{background:#fff;border:1px solid var(--line);border-radius:30px;box-shadow:0 12px 30px rgba(11,26,46,.08);padding:28px}.intro{display:flex;justify-content:space-between;gap:18px;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:22px}.intro h2{margin:0;color:var(--navy);font-size:1.6rem}.intro p{margin:6px 0 0;color:var(--muted)}.progress{min-width:180px;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:12px}.progress-row{display:flex;justify-content:space-between;font-size:.78rem;font-weight:900;color:var(--muted);text-transform:uppercase;margin-bottom:8px}.bar{height:10px;background:#e2e8f0;border-radius:999px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue),#60a5fa);transition:.25s}
+    .layout{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start}.questions{display:grid;gap:16px}.q{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:18px}.q.miss{border-color:#fb923c;box-shadow:0 0 0 4px rgba(251,146,60,.14)}.qt{display:flex;gap:10px;font-weight:900;color:var(--navy);margin-bottom:8px}.qhelp{color:#64748b;font-size:.82rem;margin:0 0 12px 38px}.num{width:28px;height:28px;border-radius:9px;background:var(--blue);color:white;display:grid;place-items:center;flex:0 0 auto}.opts{display:grid;gap:9px}.opt{display:grid;grid-template-columns:24px 1fr;gap:10px;background:white;border:1px solid var(--line);border-radius:14px;padding:12px;cursor:pointer}.opt:hover{border-color:#93c5fd;background:#f8fbff}.opt:has(input:checked){border-color:var(--blue);background:var(--soft);box-shadow:0 6px 18px rgba(37,99,235,.1)}.opt input{width:18px;height:18px;accent-color:var(--blue);margin-top:2px}.opt strong{display:block;font-size:.91rem;line-height:1.35}.opt span span{display:block;color:var(--muted);font-size:.8rem;margin-top:2px}
+    .actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}button{border:0;border-radius:999px;padding:12px 18px;min-height:46px;font-size:.95rem;font-weight:900;cursor:pointer}.primary{background:var(--blue);color:#fff;box-shadow:0 8px 22px rgba(37,99,235,.25)}.primary:hover{background:var(--blue2)}.secondary{background:white;color:var(--navy);border:1px solid var(--line)}.status{min-height:22px;color:var(--muted);font-weight:800}.status.warn{color:#9a3412}
+    .result{position:sticky;top:92px;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 8px 22px rgba(11,26,46,.08);overflow:hidden}.rtop{background:linear-gradient(145deg,#081424,var(--navy2));color:white;padding:22px}.label{display:inline-flex;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#bfdbfe;border-radius:999px;padding:5px 10px;font-size:.72rem;font-weight:900;text-transform:uppercase;margin-bottom:10px}.rtop h2{margin:0 0 8px;font-size:1.45rem}.rtop p{margin:0;color:#dbeafe;font-size:.9rem}.rbody{padding:20px;display:grid;gap:14px}.block{background:var(--bg);border:1px solid var(--line);border-radius:15px;padding:14px}.block strong{display:block;color:var(--navy);margin-bottom:7px;font-size:.9rem}.block p,.block li{color:#475569;font-size:.88rem;line-height:1.45}.block ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}.block li{position:relative;padding-left:20px}.block li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:900}.chips{display:flex;flex-wrap:wrap;gap:6px}.chip{border-radius:999px;background:var(--soft);color:var(--blue2);border:1px solid #bfdbfe;padding:4px 9px;font-size:.72rem;font-weight:900}.share{width:100%;min-height:150px;border:1px solid var(--line);border-radius:14px;padding:12px;resize:vertical;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.82rem;line-height:1.5;color:#334155;background:var(--bg)}.note{font-size:.78rem;color:var(--muted)}
+    .resource-links{display:grid;gap:8px}.resource-links a{display:block;text-decoration:none;border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:12px;padding:10px 12px;font-weight:800;font-size:.84rem}.resource-links a:hover{background:var(--soft);border-color:#bfdbfe;color:var(--blue2)}
+    .resource-grid{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.resource-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 6px 16px rgba(11,26,46,.05)}.resource-card h3{margin:0 0 6px;color:var(--navy);font-size:1rem}.resource-card p{margin:0 0 12px;color:var(--muted);font-size:.86rem}.resource-card a{color:var(--blue2);font-weight:900;text-decoration:none}
+    footer{text-align:center;color:var(--muted);font-size:.88rem;padding:28px 0 44px}
+    @media(max-width:900px){.hero-grid,.layout,.resource-grid{grid-template-columns:1fr}.result{position:static}.intro{display:block}.progress{margin-top:14px;min-width:0}}@media(max-width:560px){.wrap{width:min(100% - 24px,1120px)}.top{position:static}.pill{display:none}.hero{padding:34px 0 18px}.shell{padding:18px;border-radius:22px}.stats,.actions{grid-template-columns:1fr}.qhelp{margin-left:0}}
+
+    /* Strict mobile-first responsive refactor */
+    .mobile-result-bar{display:none}
+    @media(max-width:768px){
+      html,body{max-width:100%;overflow-x:hidden}
+      .wrap{width:100%;padding-left:12px;padding-right:12px;margin:0}
+      .top{position:static}
+      .topin{height:auto;padding:12px 0;align-items:flex-start}
+      .brand{min-width:0}
+      .brand > div:last-child{min-width:0}
+      .logo{width:40px;height:40px;border-radius:12px}
+      .pill{display:none}
+
+      .hero{padding:18px 0 12px}
+      .hero-grid{display:block}
+      .eyebrow{margin-bottom:10px;font-size:.76rem;padding:6px 10px}
+      h1{font-size:2rem;line-height:1.08;letter-spacing:-.035em}
+      .lead{font-size:.95rem;margin-top:10px}
+      .hero-card{margin-top:14px;border-radius:18px;box-shadow:0 8px 20px rgba(11,26,46,.08)}
+      .hero-card .dark{padding:16px}
+      .hero-card h2{font-size:1.05rem}
+      .hero-card p{font-size:.88rem}
+      .stats{grid-template-columns:1fr;gap:8px;padding:12px}
+      .stat{padding:10px}
+      .stat strong{font-size:1.05rem}
+
+      main{padding:10px 0 96px}
+      .shell{padding:16px;border-radius:20px;box-shadow:none}
+      .intro{display:block;padding-bottom:12px;margin-bottom:12px}
+      .intro h2{font-size:1.35rem}
+      .intro p{font-size:.9rem}
+      .progress{width:100%;min-width:0;margin-top:12px;padding:10px;border-radius:14px}
+
+      .layout{display:block}
+      .questions{display:grid;gap:12px}
+      .q{padding:16px;border-radius:18px}
+      .qt{gap:8px;margin-bottom:6px;font-size:.96rem}
+      .num{width:28px;height:28px}
+      .qhelp{margin:0 0 10px 36px;font-size:.78rem}
+      .opts{gap:8px}
+      .opt{grid-template-columns:24px minmax(0,1fr);padding:12px;border-radius:14px}
+      .opt strong{font-size:.88rem;overflow-wrap:anywhere}
+      .opt span span{font-size:.76rem;overflow-wrap:anywhere}
+      .opt input{width:18px;height:18px}
+
+      .actions{grid-template-columns:1fr;gap:10px;margin-top:12px}
+      button,.primary,.secondary{width:100%;min-height:48px}
+      .status{font-size:.84rem}
+
+      .result{position:static;margin-top:14px;border-radius:18px;box-shadow:none}
+      .rtop{padding:16px}
+      .rtop h2{font-size:1.2rem}
+      .rbody{padding:16px;gap:10px}
+      .block{padding:12px;border-radius:14px}
+      .share{width:100%;max-width:100%;min-height:96px;height:auto;overflow-x:hidden;white-space:pre-wrap;word-break:break-word;font-size:.78rem}
+
+      .resource-grid{grid-template-columns:1fr;gap:12px;margin-top:16px}
+      .resource-card{padding:14px;border-radius:16px}
+
+      .mobile-result-bar{
+        display:block;
+        position:fixed;
+        left:0;
+        right:0;
+        bottom:0;
+        z-index:80;
+        background:rgba(255,255,255,.96);
+        border-top:1px solid var(--line);
+        box-shadow:0 -12px 30px rgba(11,26,46,.14);
+        padding:10px 12px;
+      }
+      .mobile-result-toggle{
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+        border:1px solid #bfdbfe;
+        background:linear-gradient(135deg,var(--blue),var(--blue2));
+        color:#fff;
+        border-radius:16px;
+        padding:12px 14px;
+        min-height:54px;
+        text-align:left;
+      }
+      .mobile-result-toggle strong{display:block;font-size:.92rem;line-height:1.15}
+      .mobile-result-toggle small{display:block;color:#dbeafe;font-weight:800;margin-top:2px}
+      .mobile-result-chevron{font-size:1.1rem;font-weight:900}
+      .mobile-result-panel{padding-top:10px}
+      .mobile-result-panel-inner{
+        display:grid;
+        gap:10px;
+        max-height:55vh;
+        overflow:auto;
+        padding-bottom:2px;
+      }
+      .mobile-result-panel .block{margin:0}
+      .mobile-result-panel .primary{width:100%}
+    }
+
+  </style>
+</head>
+<body>
+<header class="top"><div class="wrap topin"><div class="brand"><div class="logo">EGH</div><div><div>Executive Growth Hub</div><div style="font-size:.78rem;color:#64748b;font-weight:800">Learn. Build. Scale.</div></div></div><div class="pill">Free Business Stage Finder</div></div></header>
+
+<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Multiple-Choice Business Quiz</div><h1>Find out where your business is right now.</h1><p class="lead">Select every answer that applies to you. This form will show whether your strongest need is idea clarity, setup, customer acquisition, sales growth, systems, or scaling.</p></div><aside class="hero-card"><div class="dark"><h2>For business owners and aspiring business owners</h2><p>You can select more than one answer per question. The stage with the highest score becomes your main result.</p></div><div class="stats"><div class="stat"><strong>7</strong><span>Questions</span></div><div class="stat"><strong>6</strong><span>Stages</span></div><div class="stat"><strong>Links</strong><span>Resources</span></div></div></aside></div></section>
+
+<main><div class="wrap"><section class="shell"><div class="intro"><div><h2>Business Stage Finder</h2><p>Choose all answers that describe your current situation. Answer every question before submitting.</p></div><div class="progress"><div class="progress-row"><span>Progress</span><span id="progressText">0 / 7</span></div><div class="bar"><div class="fill" id="progressFill"></div></div></div></div><div class="layout"><form id="quiz" class="questions" novalidate></form><aside class="result" aria-live="polite"><div class="rtop"><div class="label">Your Result</div><h2 id="resultTitle">Complete the quiz</h2><p id="resultSummary">Your business stage and next step will appear here after you answer the questions.</p></div><div class="rbody"><div class="block"><strong>Selected pattern</strong><div class="chips" id="chips"><span class="chip">Waiting for answers</span></div></div><div class="block"><strong>What this means</strong><p id="meaning">Answer all 7 questions to receive a simple diagnosis.</p></div><div class="block"><strong>Recommended next step</strong><p id="nextStep">Your recommended next step will appear here.</p></div><div class="block"><strong>Focus for the next 7 days</strong><ul id="focus"><li>Complete the quiz.</li><li>Review your result.</li><li>Share your result in the group for support.</li></ul></div><div class="block"><strong>Helpful resources</strong><div class="resource-links" id="resultResources"><a href="#resources">View external resources below</a></div></div><textarea id="share" class="share" rows="4" readonly>Complete the quiz to generate a shareable result.</textarea><button class="primary" type="button" id="copy">Copy My Result</button><p class="note">After copying, paste your result in Executive Growth Hub so members and admins can recommend the right resources.</p></div></aside></div></section>
+
+<section id="resources" class="resource-grid" aria-label="External business resources">
+  <div class="resource-card"><h3>United States Startup Help</h3><p>Use SBA guides for business planning, market research, startup costs, registration, launch, and management.</p><a href="https://www.sba.gov/business-guide" target="_blank" rel="noopener">Open SBA Business Guide</a></div>
+  <div class="resource-card"><h3>U.S. EIN Registration</h3><p>Use the IRS EIN page when a U.S. business needs a federal employer identification number.</p><a href="https://www.irs.gov/businesses/employer-identification-number" target="_blank" rel="noopener">Open IRS EIN Resource</a></div>
+  <div class="resource-card"><h3>Nigeria Business Registration</h3><p>Use CAC and SMEDAN resources for Nigerian business registration, SME support, and access to business benefits.</p><a href="https://www.cac.gov.ng/" target="_blank" rel="noopener">Open CAC Website</a><br><a href="https://smedan.gov.ng/register-now/" target="_blank" rel="noopener">Open SMEDAN Registration</a></div>
+</section>
+
+</div></main>
+
+
+<div id="mobileResultBar" class="mobile-result-bar" hidden>
+  <button type="button" id="mobileResultToggle" class="mobile-result-toggle" aria-expanded="false">
+    <span>
+      <strong id="mobileResultStage">Your result is ready</strong>
+      <small>Tap to view recommended path</small>
+    </span>
+    <span class="mobile-result-chevron" aria-hidden="true">⌃</span>
+  </button>
+  <div id="mobileResultPanel" class="mobile-result-panel" hidden>
+    <div class="mobile-result-panel-inner">
+      <div class="block">
+        <strong>Recommended next step</strong>
+        <p id="mobileNextStep">Your recommended next step will appear here.</p>
+      </div>
+      <textarea id="mobileShare" class="share" rows="4" readonly>Complete the quiz to generate a shareable result.</textarea>
+      <button class="primary" type="button" id="mobileCopy">Copy My Result</button>
+    </div>
+  </div>
+</div>
+
+<footer><div class="wrap">Executive Growth Hub · Free business learning resources for entrepreneurs and aspiring business owners.</div></footer>
+
+<script>
+(function(){
+const questions=[
+['q1','Where are you right now?',[['A','I want to start a business, but I am not sure what to start.','Idea clarity is the biggest need.'],['B','I have a business idea, but I have not fully structured it.','Setup and planning are needed.'],['C','I have started, but I need people to know about my business.','Visibility and awareness are needed.'],['D','People know about my business, but I need more sales.','Offers, pricing, and follow-up are needed.'],['E','I am getting sales, but I need better systems and organization.','Tracking and operations are needed.'],['F','I have sales and systems, and I am ready to expand.','Growth and scale are the focus.']]],
+['q2','What do you already have in place?',[['A','I do not have a clear business idea yet.','I need idea guidance.'],['B','I have an idea, but I need a name, plan, pricing, or registration.','I need setup support.'],['C','I have a page, WhatsApp, website, or handle, but not enough people are seeing it.','I need customer acquisition.'],['D','I get inquiries, but not enough people buy.','I need sales improvement.'],['E','I get sales, but tracking orders, money, delivery, or follow-up is difficult.','I need systems.'],['F','I have demand and want to expand capacity, staff, supply, or market reach.','I need scaling.']]],
+['q3','Which sales statement describes you?',[['A','I have not started selling because I am still choosing an idea.','I am in the idea stage.'],['B','I have not started selling because the business structure is not ready.','I am in setup.'],['C','Sales are rare because people do not know about the business yet.','I need visibility.'],['D','People ask questions, but many do not pay or order.','I need stronger sales conversion.'],['E','I am selling, but the process feels disorganized.','I need systems.'],['F','I am selling and need to grow beyond my current capacity.','I need scale.']]],
+['q4','What is your biggest challenge right now?',[['A','Choosing the right business idea.','I need clarity.'],['B','Creating a clear plan, name, offer, or pricing.','I need setup support.'],['C','Getting people to notice my business.','I need visibility.'],['D','Turning interested people into paying customers.','I need sales conversion.'],['E','Managing orders, customers, money, delivery, or follow-up.','I need systems.'],['F','Expanding, hiring, increasing inventory, or reaching more markets.','I need scaling strategy.']]],
+['q5','How are customers finding you now?',[['A','They are not finding me because I have not chosen a business yet.','Idea stage.'],['B','They are not finding me because my setup is incomplete.','Setup stage.'],['C','Some people find me, but not enough.','Customer acquisition stage.'],['D','People find me, but I need more of them to buy.','Sales growth stage.'],['E','People find me and buy, but I need better organization.','Systems stage.'],['F','People find me and buy, and I want to reach a larger audience.','Scaling stage.']]],
+['q6','What do you need most this week?',[['A','Help choosing or validating a business idea.','Idea guidance.'],['B','Help with business setup, registration, branding, pricing, or planning.','Setup support.'],['C','Help with marketing, posting, visibility, and customer attraction.','Customer acquisition.'],['D','Help with offers, pricing, sales conversation, follow-up, and closing.','Sales growth.'],['E','Help with tracking, operations, delivery, payments, inventory, or automation.','Systems.'],['F','Help with expansion, hiring, supply, partnership, location, or bigger strategy.','Scaling.']]],
+['q7','What should Executive Growth Hub share with you first?',[['A','Business ideas and how to choose one.','Idea resources.'],['B','Business plan, registration, branding, and pricing templates.','Setup resources.'],['C','Marketing, content, visibility, and customer attraction guides.','Customer acquisition resources.'],['D','Sales scripts, offer templates, pricing, and follow-up tools.','Sales resources.'],['E','Customer tracker, order tracker, finance tracker, and automation tools.','Systems resources.'],['F','Scaling checklist, hiring guide, inventory plan, and expansion strategy.','Scaling resources.']]]
+];
+const stages={A:['Idea Stage','You are still deciding what business to start or what problem to solve.','Your main need is clarity. Focus on choosing a business idea that matches your skills, resources, and a real customer need.','Choose one business idea based on your skills, interests, available resources, and customer needs.',['List 3 business ideas you are considering.','Write who each idea would help and what problem it solves.','Choose one idea to test with simple conversations before spending money.'],['SBA: Plan your business','https://www.sba.gov/counseling/plan-your-business/']],B:['Setup Stage','You have a business idea, but you need structure before you can sell confidently.','Your main need is business structure: name, target customer, offer, pricing, registration, brand message, and simple business plan.','Create your business name, define your offer, identify your target customer, and write a simple one-page business plan.',['Write your offer in one sentence.','Choose your target customer.','Create a simple price list, service menu, or product list.'],['SBA: Launch your business','https://www.sba.gov/counseling/launch-your-business/']],C:['Customer Acquisition Stage','Your business exists, but not enough people know about it yet.','Your main need is visibility. More people need to see your offer, understand what you do, and know how to contact or buy from you.','Start promoting consistently, improve your social media presence, share your offer clearly, and tell people how to buy or contact you.',['Post your offer clearly at least 3 times this week.','Share product photos, service examples, or customer benefits.','Ask 10 people to share, refer, or review your business.'],['SBA: Manage your business','https://www.sba.gov/counseling/manage-your-business/']],D:['Sales Growth Stage','People know about your business, but you need more paying customers.','Your main need is better sales conversion: stronger pricing, clearer offers, follow-up, testimonials, bundles, or easier buying steps.','Improve your pricing, create stronger offers, follow up with interested people, and make it easier for customers to buy.',['Create one clear offer or bundle.','Follow up with every interested person from the last 30 days.','Make your payment, order, or booking process simple.'],['SBA: Manage your business','https://www.sba.gov/counseling/manage-your-business/']],E:['Systems Stage','You are getting sales, but you need better organization and operations.','Your main need is systems: tracking customers, orders, money, delivery, inventory, follow-ups, and service quality.','Create systems for tracking customers, orders, payments, delivery, follow-up, inventory, and daily operations.',['Create a simple customer and order tracker.','Write down your delivery or service process step by step.','Set a weekly review time for money, inventory, and follow-up.'],['SBA: Manage your business','https://www.sba.gov/counseling/manage-your-business/']],F:['Scaling Stage','You have sales and structure, and now you are ready to grow bigger.','Your main need is expansion strategy: hiring help, increasing inventory, expanding locations, partnerships, supply, or new markets.','Expand your reach, increase capacity, improve supply, hire support, create partnerships, or enter new markets.',['Identify the one bottleneck limiting growth.','Decide what support, inventory, or system is needed next.','Create a 30-day scale plan with one measurable target.'],['SMEDAN: Register for SME benefits','https://smedan.gov.ng/register-now/']]};
+const names={A:'Idea',B:'Setup',C:'Customer Acquisition',D:'Sales Growth',E:'Systems',F:'Scaling'};
+const form=document.getElementById('quiz'), pt=document.getElementById('progressText'), pf=document.getElementById('progressFill'), status=document.createElement('div');status.className='status';form.after(status);
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+form.innerHTML=questions.map((q,i)=>'<div class="q" data-q="'+q[0]+'"><div class="qt"><span class="num">'+(i+1)+'</span><span>'+q[1]+'</span></div><p class="qhelp">Select all that apply.</p><div class="opts">'+q[2].map(o=>'<label class="opt"><input type="checkbox" name="'+q[0]+'" value="'+o[0]+'"><span><strong>'+esc(o[1])+'</strong><span>'+esc(o[2])+'</span></span></label>').join('')+'</div></div>').join('')+'<div class="actions"><button class="primary" type="submit">Get My Stage</button><button class="secondary" type="button" id="reset">Reset Quiz</button></div>';
+function answers(){const a={};questions.forEach(q=>{const selected=[...form.querySelectorAll('input[name="'+q[0]+'"]:checked')].map(x=>x.value);if(selected.length)a[q[0]]=selected});return a}
+function progress(){const n=Object.keys(answers()).length;pt.textContent=n+' / 7';pf.style.width=Math.round(n/7*100)+'%';return n}
+function result(){const a=answers();const scores={A:0,B:0,C:0,D:0,E:0,F:0};Object.values(a).forEach(arr=>arr.forEach(v=>scores[v]++));let best='A';['A','B','C','D','E','F'].forEach(k=>{if(scores[k]>scores[best]||(scores[k]===scores[best]&&'ABCDEF'.indexOf(k)>'ABCDEF'.indexOf(best)))best=k});return {best,scores}}
+function syncMobileResult(r){const bar=document.getElementById('mobileResultBar');if(!bar)return;bar.hidden=false;document.getElementById('mobileResultStage').textContent=r[0];document.getElementById('mobileNextStep').textContent=r[3];document.getElementById('mobileShare').value=document.getElementById('share').value}
+function render(k,scores){const r=stages[k];document.getElementById('resultTitle').textContent=r[0];document.getElementById('resultSummary').textContent=r[1];document.getElementById('meaning').textContent=r[2];document.getElementById('nextStep').textContent=r[3];document.getElementById('focus').innerHTML=r[4].map(x=>'<li>'+esc(x)+'</li>').join('');document.getElementById('chips').innerHTML=Object.entries(scores).filter(x=>x[1]>0).map(x=>'<span class="chip">'+names[x[0]]+': '+x[1]+'</span>').join('');document.getElementById('resultResources').innerHTML='<a href="'+r[5][1]+'" target="_blank" rel="noopener">'+r[5][0]+'</a><a href="https://www.cac.gov.ng/" target="_blank" rel="noopener">Nigeria: Corporate Affairs Commission</a><a href="https://www.irs.gov/businesses/employer-identification-number" target="_blank" rel="noopener">U.S.: IRS EIN Resource</a>';document.getElementById('share').value='My Business Stage Finder Result\n\nBusiness stage: '+r[0]+'\n\nWhat this means:\n'+r[1]+'\n\nRecommended next step:\n'+r[3]+'\n\nMy 7-day focus:\n- '+r[4].join('\n- ')+'\n\nShared from Executive Growth Hub.';syncMobileResult(r)}
+form.addEventListener('change',e=>{if(e.target.matches('input')){e.target.closest('.q').classList.remove('miss');status.textContent='';status.className='status';progress()}});
+form.addEventListener('submit',e=>{e.preventDefault();const a=answers();form.querySelectorAll('.q').forEach(q=>q.classList.remove('miss'));if(progress()<7){questions.forEach(q=>{if(!a[q[0]])form.querySelector('[data-q="'+q[0]+'"]').classList.add('miss')});status.textContent='Please select at least one answer for all 7 questions.';status.className='status warn';form.querySelector('.miss').scrollIntoView({behavior:'smooth',block:'center'});return}const r=result();render(r.best,r.scores);status.textContent='Your business stage result is ready.';status.className='status';if(innerWidth<769){document.getElementById('mobileResultBar').hidden=false}else if(innerWidth<900){document.querySelector('.result').scrollIntoView({behavior:'smooth',block:'start'})}});
+document.getElementById('reset').addEventListener('click',()=>{form.reset();form.querySelectorAll('.q').forEach(q=>q.classList.remove('miss'));progress();status.textContent='';status.className='status';document.getElementById('resultTitle').textContent='Complete the quiz';document.getElementById('resultSummary').textContent='Your business stage and next step will appear here after you answer the questions.';document.getElementById('meaning').textContent='Answer all 7 questions to receive a simple diagnosis.';document.getElementById('nextStep').textContent='Your recommended next step will appear here.';document.getElementById('focus').innerHTML='<li>Complete the quiz.</li><li>Review your result.</li><li>Share your result in the group for support.</li>';document.getElementById('chips').innerHTML='<span class="chip">Waiting for answers</span>';document.getElementById('resultResources').innerHTML='<a href="#resources">View external resources below</a>';document.getElementById('share').value='Complete the quiz to generate a shareable result.';const bar=document.getElementById('mobileResultBar');const panel=document.getElementById('mobileResultPanel');const toggle=document.getElementById('mobileResultToggle');if(bar)bar.hidden=true;if(panel)panel.hidden=true;if(toggle)toggle.setAttribute('aria-expanded','false');document.getElementById('mobileShare').value='Complete the quiz to generate a shareable result.';window.scrollTo({top:0,behavior:'smooth'})});
+document.getElementById('copy').addEventListener('click',async()=>{const v=document.getElementById('share').value;if(v.includes('Complete the quiz')){status.textContent='Complete the quiz first, then copy your result.';status.className='status warn';return}try{await navigator.clipboard.writeText(v)}catch(e){const t=document.getElementById('share');t.focus();t.select();document.execCommand('copy')}const b=document.getElementById('copy');b.textContent='Copied';setTimeout(()=>b.textContent='Copy My Result',1500)});
+const mobileToggle=document.getElementById('mobileResultToggle');
+if(mobileToggle){mobileToggle.addEventListener('click',()=>{const panel=document.getElementById('mobileResultPanel');const open=panel.hidden;panel.hidden=!open;mobileToggle.setAttribute('aria-expanded',String(open));document.querySelector('.mobile-result-chevron').textContent=open?'⌄':'⌃'})}
+const mobileCopy=document.getElementById('mobileCopy');
+if(mobileCopy){mobileCopy.addEventListener('click',async()=>{const v=document.getElementById('mobileShare').value;if(v.includes('Complete the quiz'))return;try{await navigator.clipboard.writeText(v)}catch(e){const t=document.getElementById('mobileShare');t.focus();t.select();document.execCommand('copy')}mobileCopy.textContent='Copied';setTimeout(()=>mobileCopy.textContent='Copy My Result',1500)})}
+progress();
+})();
+</script>
+</body></html>
